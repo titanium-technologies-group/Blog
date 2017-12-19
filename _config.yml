@@ -4,7 +4,7 @@ description: "Up-to-date news"
 url: "http://blog.titanium.codes"
 
 # Build settings
-baseurl: '/' # Change this to your relative path (ex: /blog/), or leave just a /
+baseurl: '//' # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: redcarpet
 source: .
 destination: ./_site
