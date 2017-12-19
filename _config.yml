@@ -9,7 +9,7 @@ markdown: redcarpet
 source: .
 destination: ./_site
 permalink: /:title
-paginate: 8
+paginate: 4
 paginate_path: /page:num/
 
 # Default values
@@ -28,3 +28,5 @@ custom_nav_footer: false
 reverse: false
 
 exclude: ['README.md']
+
+plugins: [jekyll-paginate, redcarpet]

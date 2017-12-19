@@ -293,6 +293,7 @@ body {
 ----------------------*/
 .our-blog {
     padding-top: 120px;
+    padding-bottom: 130px;
 }
 .our-blog article .post-container {
     margin-bottom: 30px;
@@ -401,4 +402,106 @@ body {
     100% {
         visibility: hidden;
     }
+}
+
+
+/*------------------
+       Footer
+------------------*/
+
+
+.section-6 {
+    clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);
+    padding: 100px 0 55px;
+    margin-top: -120px;
+    background: gold;
+}
+
+.section-6 .social {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.section-6 .social #beyond-security {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+}
+
+.section-6 .social .facebook, .section-6 .social .instagram, .section-6 .social .github {
+    background: url("../images/fb_black.png") no-repeat;
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+    display: block;
+}
+
+.section-6 .social .facebook:hover, .section-6 .social .instagram:hover, .section-6 .social .github:hover {
+    background: url("../images/fb_white.png") no-repeat;
+    width: 35px;
+    height: 35px;
+    display: block;
+}
+
+.section-6 .social .instagram {
+    background: url("../images/insta_black.png") no-repeat;
+}
+
+.section-6 .social .instagram:hover {
+    background: url("../images/insta_white.png") no-repeat;
+}
+
+.section-6 .social .github {
+    background: url("../images/github_black.png") no-repeat;
+    background-size: 35px;
+}
+
+.section-6 .social .github:hover {
+    background: url("../images/github_white.png") no-repeat;
+    background-size: 35px;
+}
+
+/*-----------------
+    Video embed
+-----------------*/
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*----------
+  Post page
+-----------*/
+
+
+#post-page {
+    padding: 120px 0 130px 0;
+}
+
+#post-page h2,
+#post-page time  {
+    text-align: center;
+}
+
+#post-page a {
+    color: gold !important;
+}
+
+#post-page .content img {
+    width: 100%;
 }

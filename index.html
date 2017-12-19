@@ -3,16 +3,39 @@ layout: default
 ---
 
 <!-- Posts -->
-<ul id="posts">
-
+<div class="row container our-blog">
+    <h1 class="center-align">OUR BLOG</h1>
+    <div class="col s12" id="wrap">
+        <form action="" autocomplete="on">
+            <input id="search" name="search" type="text" placeholder="What're you looking for ?">
+            <input id="search_submit" value="Rechercher" type="submit">
+        </form>
+    </div>
+    <ul id="posts">
     {% for post in paginator.posts %}
-
-        <li class="post">
-            <h2><a href="{% if site.baseurl == '/' %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2>
-            <time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}</time>
-            <p>{{ post.content | strip_html | truncatewords:50 }}</p>
-        </li>
-
-    {% endfor %}
-
-</ul>
+            <li>
+                <article>
+                    <div class="post-container col s12">
+                        <div class="post">
+                            <div class="hovered-block">
+                                <div class="post-image col s12 m6"><img class="responsive-img" src="{{ post.image }}"></div>
+                                <div class="post-title col s12 m6">
+                                    <h3>{{ post.title }}</h3>
+                                    <time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}</time>
+                                    <p>
+                                        {{ post.content | strip_html | truncatewords:50 }}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hovered-buttons col s12">
+                                <div class="facebook same-style-button"><i class="material-icons">visibility</i><a href="https://www.facebook.com/titanium.moldova/?fref=ts" target="_blank">Facebook</a></div>
+                                <div class="instagram same-style-button"><i class="material-icons">visibility</i><a href="https://www.instagram.com/titanium.codes" target="_blank">Instagram</a></div>
+                                <div class="read-more same-style-button"><i class="material-icons">visibility</i><a href="{% if site.baseurl == '/' %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">Read More</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
