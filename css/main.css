@@ -28,17 +28,25 @@ body {
 }
 .same-style-button i {
     position: relative;
+    display: flex;
 }
-.same-style-button i:after {
-    content: '|';
-    position: absolute;
-    height: 100%;
-    top: -5px;
-    right: -9px;
-}
+/*.same-style-button i:after {*/
+    /*content: '|';*/
+    /*position: absolute;*/
+    /*height: 100%;*/
+    /*top: -5px;*/
+    /*right: -9px;*/
+/*}*/
 .same-style-button:hover {
     -webkit-box-shadow: 0 0 15px 3px rgba(251,242,61,0.5);
     box-shadow: 0 0 15px 3px rgba(251,242,61,0.5);
+}
+
+
+
+.same-style-button i img {
+    width: 20px;
+    height: 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -50,6 +58,11 @@ body {
     }
     .same-style-button i:after {
         right: -5px;
+    }
+
+    .same-style-button i img {
+        width: 14px;
+        height: 14px;
     }
 }
 
