@@ -1,13 +1,18 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>BLOG</h1>
-</body>
-</html>
+---
+layout: default
+---
+
+<!-- Posts -->
+<ul id="posts">
+
+    {% for post in paginator.posts %}
+
+        <li class="post">
+            <h2><a href="{% if site.baseurl == '/' %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2>
+            <time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}</time>
+            <p>{{ post.content | strip_html | truncatewords:50 }}</p>
+        </li>
+
+    {% endfor %}
+
+</ul>

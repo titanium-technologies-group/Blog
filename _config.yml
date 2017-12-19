@@ -1,0 +1,30 @@
+# Site settings
+title: Blog | titanium-codes
+description: "Up-to-date news"
+url: "http://blog.titanium.codes"
+
+# Build settings
+baseurl: '/' # Change this to your relative path (ex: /blog/), or leave just a /
+markdown: redcarpet
+source: .
+destination: ./_site
+permalink: /:title
+paginate: 8
+paginate_path: /page:num/
+
+# Default values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+
+# Options
+custom_header: false
+custom_nav_footer: false
+reverse: false
+
+exclude: ['README.md']
