@@ -30,7 +30,7 @@ layout: default
                             <div class="hovered-buttons col s12">
                                 <div class="facebook same-style-button"><i class=""><img src="images/fb_black.png" alt=""></i><a href="https://www.facebook.com/titanium.moldova/?fref=ts" target="_blank">Facebook</a></div>
                                 <div class="instagram same-style-button"><i class=""><img src="images/insta_black.png" alt=""></i><a href="https://www.instagram.com/titanium.codes" target="_blank">Instagram</a></div>
-                                <div class="read-more same-style-button"><i class="material-icons">visibility</i><a href="{% if site.baseurl == '/' %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">Read More</a></div>
+                                <div class="read-more same-style-button"><i class="material-icons">visibility</i><a href="{% if site.baseurl == '' %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">Read More</a></div>
                             </div>
                         </div>
                     </div>
